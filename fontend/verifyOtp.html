@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email</title>
+  <link rel="stylesheet" href="verifyotp.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="verify-container">
+
+    <div class="verify-card">
+
+      <div class="icon">
+        ✉️
+      </div>
+
+      <h1>Verify Your Email</h1>
+
+      <p class="subtitle">
+        We've sent a verification code to your email address.
+        Enter the 6-digit code below to continue.
+      </p>
+
+      <p class="email">
+        example@gmail.com
+      </p>
+
+      <div>
+
+        <div class="otp-container">
+
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            required
+          >
+
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            required
+          >
+
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            required
+          >
+
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            required
+          >
+
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            required
+          >
+
+          <input
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            required
+          >
+
+        </div>
+
+        <button onclick="verifyOtp()">
+          Verify OTP
+        </button>
+
+      </div>
+
+      <p class="resend-text">
+        Didn't receive the code?
+        <a href="#">Resend OTP</a>
+      </p>
+
+      <a href="forgot-password.html" class="back">
+        ← Change Email
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+<script src="veriryOtp.js" type="module"></script>
+</html>

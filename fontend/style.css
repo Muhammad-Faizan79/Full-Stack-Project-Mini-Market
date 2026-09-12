@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    --purple: #7040e8;
+    --purple2: #8a5cf0;
+    --dark: #171923;
+    --muted: #74788b;
+    --bg: #f8f8fc;
+    --border: #e9e9f0
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--dark)
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+/* ---------- Page shell ---------- */
+
+.dis {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    padding: 40px 20px;
+    background: linear-gradient(125deg, #f8f5ff, #f8f8fc 55%, #f4f8ff)
+}
+
+/* Brand mark above the card, matches the header logo on Home/Dashboard */
+
+.dis::before {
+    content: "";
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 800;
+    font-size: 19px;
+    color: #35208e;
+    text-decoration: none
+}
+
+.brand-mark span:not(.logo-icon) {
+    color: #5140ad
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--purple);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 17px
+}
+
+/* ---------- Card ---------- */
+
+.main {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 20px 45px #1717230d;
+    padding: 36px 32px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.LOGIN {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    margin-bottom: 4px
+}
+
+.user {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #f0ebff;
+    color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px
+}
+
+.user i {
+    font-size: 20px
+}
+
+.LOGIN h1 {
+    font-size: 20px;
+    letter-spacing: -.3px
+}
+
+.auth-sub {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.6;
+    max-width: 280px
+}
+
+/* ---------- Form fields ---------- */
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.field label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #4b4f61
+}
+
+.field-wrap {
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+.field-wrap i.leading {
+    position: absolute;
+    left: 13px;
+    font-size: 13px;
+    color: #a5a8ba;
+    pointer-events: none
+}
+
+.main input {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fbfbfe;
+    padding: 0 13px 0 36px;
+    font-size: 13px;
+    outline: none;
+    transition: .2s
+}
+
+.main input:focus {
+    border-color: var(--purple);
+    background: #fff;
+    box-shadow: 0 0 0 3px #7040e81a
+}
+
+.main input::placeholder {
+    color: #a5a8ba
+}
+
+.toggle-pass {
+    position: absolute;
+    right: 8px;
+    border: 0;
+    background: none;
+    color: #a5a8ba;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    transition: .2s
+}
+
+.toggle-pass:hover {
+    color: var(--purple);
+    background: #f4f1ff
+}
+
+/* ---------- Links row (remember / forgot) ---------- */
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    cursor: pointer
+}
+
+.check input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--purple);
+    cursor: pointer
+}
+
+.main a {
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.main a:hover {
+    text-decoration: underline
+}
+
+/* ---------- Buttons ---------- */
+
+.primary-btn {
+    width: 100%;
+    height: 46px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--purple);
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s
+}
+
+.primary-btn:hover {
+    background: #5f31d6;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px #7040e833
+}
+
+.primary-btn:active {
+    transform: translateY(0)
+}
+
+/* ---------- Footer switch line ---------- */
+
+.switch {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--muted)
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 460px) {
+    .main {
+        padding: 30px 22px 26px;
+        border-radius: 14px
+    }
+
+    .dis {
+        padding: 28px 16px
+    }
+}

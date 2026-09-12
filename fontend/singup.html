@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up — MarketPlace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="dis">
+        <a class="brand-mark" href="index.html">
+            <span class="logo-icon">🛍</span>
+            Market<span>Place</span>
+        </a>
+
+        <div class="main">
+            <div class="LOGIN">
+                <div class="user"><i class="fa-solid fa-user-plus"></i></div>
+                <h1>Create your account</h1>
+                <p class="auth-sub">Start shopping or selling in minutes.</p>
+            </div>
+
+            <div class="field">
+                <label for="fullName">Full name</label>
+                <div class="field-wrap">
+                    <i class="fa-solid fa-user leading"></i>
+                    <input id="fullName" type="text" placeholder="Enter your full name">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <div class="field-wrap">
+                    <i class="fa-solid fa-envelope leading"></i>
+                    <input id="email" type="text" placeholder="Enter your email">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <div class="field-wrap">
+                    <i class="fa-solid fa-lock leading"></i>
+                    <input id="password" type="password" placeholder="Enter your password">
+                    <button type="button" class="toggle-pass" id="togglePass" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button class="primary-btn" onclick="singup()">Create account</button>
+
+            <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('togglePass');
+    var pass = document.getElementById('password');
+    if (toggle && pass) {
+      toggle.addEventListener('click', function () {
+        var isHidden = pass.type === 'password';
+        pass.type = isHidden ? 'text' : 'password';
+        toggle.innerHTML = isHidden
+          ? '<i class="fa-solid fa-eye-slash"></i>'
+          : '<i class="fa-solid fa-eye"></i>';
+        toggle.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+      });
+    }
+  })();
+</script>
+<script src="app.js" type="module"></script>
+</body>
+</html>

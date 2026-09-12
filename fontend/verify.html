@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP — MarketPlace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="dis">
+        <a class="brand-mark" href="index.html">
+            <span class="logo-icon">🛍</span>
+            Market<span>Place</span>
+        </a>
+
+        <div class="main">
+            <div class="LOGIN">
+                <div class="user"><i class="fa-solid fa-envelope"></i></div>
+                <h1>Verify your email</h1>
+                <p class="auth-sub">Enter the code we sent to your email to confirm your account.</p>
+            </div>
+
+            <div class="field">
+                <label for="otp">OTP code</label>
+                <div class="field-wrap">
+                    <i class="fa-solid fa-key leading"></i>
+                    <input id="otp" type="number" placeholder="Enter your OTP">
+                </div>
+            </div>
+
+            <button class="primary-btn" onclick="verify()">Verify OTP</button>
+
+            <p class="switch"><a href="index.html">Resend OTP</a></p>
+        </div>
+    </div>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>

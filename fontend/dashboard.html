@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketPlace Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🛍</div>
+        <span>Market<span>Place</span></span>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link active" href="#"><span><i class="fa-solid fa-gauge"></i></span> Dashboard</a>
+        <a class="nav-link" href="./index.html"><span><i class="fa-solid fa-house"></i></span> Home</a>
+        <!-- <a class="nav-link" href="#"><span>▤</span> Orders</a> -->
+        <!-- <a class="nav-link" href="#"><span>▱</span> Messages</a> -->
+        <a class="nav-link" href="#"><span><i class="fa-solid fa-gear"></i></span> Settings</a>
+      </nav>
+
+      <div class="upgrade">
+        <div class="upgrade-title">Upgrade to Pro 👑</div>
+        <p>Unlock more features & grow your business.</p>
+        <button>Upgrade Now</button>
+      </div>
+
+      <div class="copyright">© 2026 MarketPlace<br>All rights reserved.</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" >☰</button>
+
+        <div class="search">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="text" id="searchInput" placeholder="Search products, orders...">
+        </div>
+
+        <div class="top-actions">
+          <button class="icon-btn" title="Notifications"><i class="fa-regular fa-bell"></i><b>3</b></button>
+          <button class="icon-btn" title="Cart"><i class="fa-solid fa-cart-shopping"></i><b>2</b></button>
+
+          <div class="profile" id="profileBtn">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Profile picture">
+            <div>
+              <strong id="userName">Muhammad Faizan</strong>
+              <small>Seller</small>
+            </div>
+            <!-- <span>⌄</span> -->
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="welcome-row">
+          <div>
+            <h1 id="h1heding">Welcome back, Muhammad Faizan! 👋</h1>
+            <p>Here's what's happening with your store today.</p>
+          </div>
+          <div class="performance">
+            <span class="performance-icon">★</span>
+            <div><small>Store Performance</small><strong>↗ 12.5%</strong><em>vs last 7 days</em></div>
+          </div>
+        </div>
+
+        <!-- <div class="stats-grid">
+          <article class="stat-card purple">
+            <div class="stat-icon">🛍</div>
+            <div class="stat-info"><span>Total Sales</span><strong>$12,450</strong><small>↗ 15.3% <i>vs last 7 days</i></small></div>
+            <div class="sparkline">〰〰╱╲〰╱╲</div>
+          </article>
+
+          <article class="stat-card green">
+            <div class="stat-icon">▣</div>
+            <div class="stat-info"><span>Total Orders</span><strong>320</strong><small>↗ 9.8% <i>vs last 7 days</i></small></div>
+            <div class="sparkline">〰╱╲〰╱╲</div>
+          </article>
+
+          <article class="stat-card orange">
+            <div class="stat-icon">◇</div>
+            <div class="stat-info"><span>Total Products</span><strong>48</strong><small>↗ 6.2% <i>vs last 7 days</i></small></div>
+            <div class="sparkline">〰╱╲〰╱╲</div>
+          </article>
+
+          <article class="stat-card blue">
+            <div class="stat-icon">♙</div>
+            <div class="stat-info"><span>Total Customers</span><strong>1,245</strong><small>↗ 18.7% <i>vs last 7 days</i></small></div>
+            <div class="sparkline">〰╱╲〰╱╲</div>
+          </article>
+        </div> -->
+
+        <div class="dashboard-grid">
+          <section class="panel products-panel">
+            <div class="panel-head">
+              <h2>Recent Products</h2>
+              <button onclick="showForm()"  class="link-btn">+ Create Product </button>
+            </div>
+
+            <div class="products" id="products">
+              
+            </div>
+          </section>
+
+          
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="floating-cart">🛒</button>
+  <div class="overlay" id="overlay"></div>
+
+
+  
+
+
+<div id="fom" class="product-form-container ">
+
+
+
+</div>
+
+
+
+
+  <script src="dashbord.js" type="module"></script>
+</body>
+</html>
