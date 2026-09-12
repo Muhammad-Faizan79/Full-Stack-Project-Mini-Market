@@ -1,3 +1,3 @@
-const baseUrl ="http://localhost:5000/api"
+const baseUrl ="https://full-stack-project-mini-market.vercel.app/api";
 
 export default baseUrl
