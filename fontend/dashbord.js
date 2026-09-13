@@ -153,11 +153,11 @@ formData.append("image",image)
   if(data.status){
     alert(data.message)
   }else{
-    console.log(data)
+    alert(data.message)
   }
-  console.log("hello" , data )
 
   } catch (error) {
+    alert("server erro")
     console.log(error.message)
     // alert(data.message)
   }
