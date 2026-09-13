@@ -13,11 +13,11 @@ const checkAuth = () => {
     if (token) {
         // User logged in
         authArea.innerHTML = `
-            <a href="./dashboard.html" class="auth-btn">
+            <a href="./dashboard.html" class="primary-btn">
                 Dashboard
             </a>
 
-            <button id="logoutBtn" onclick="logOut()"  class="auth-btn">
+            <button id="logoutBtn" onclick="logOut()"  class="primary-btn">
                 Logout
             </button>
         `;
@@ -31,11 +31,11 @@ const checkAuth = () => {
     } else {
         // User not logged in
         authArea.innerHTML = `
-            <a href="./login.html" class="auth-btn">
+            <a href="./login.html" class="primary-btn">
                 Login
             </a>
 
-            <a href="./singup.html" class="auth-btn">
+            <a href="./singup.html" class="primary-btn">
                 Singup
             </a>
         `;
