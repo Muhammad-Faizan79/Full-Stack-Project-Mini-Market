@@ -152,8 +152,10 @@ formData.append("image",image)
 
   if(data.status){
     alert(data.message)
+  }else{
+    console.log(data)
   }
-
+  console.log("hello" , data )
 
   } catch (error) {
     console.log(error.message)
@@ -179,7 +181,7 @@ if(responce.status){
   products = responce.products
   renderProducts()
 }else{
-  console.log(responce.message, responce)
+  console.log(responce.message,"responce.message", responce)
 }
 
   } catch (error) {

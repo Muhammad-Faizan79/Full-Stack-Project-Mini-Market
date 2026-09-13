@@ -4,7 +4,6 @@ import cloudinary from "../config/Cloudinarry.js"
 
 export const createProduct= async (req , res)=>{
     try {
-        
     const {title, des ,price,catogery, condition,location}= req.body;
 
     if(!title || !des || !price || !condition || !location){
@@ -47,18 +46,15 @@ export const createProduct= async (req , res)=>{
         UrlImage:result.secure_url
     }
     const Data = await product.create(productobj)
-
     return res.json({
         message:"Product Created!",
         status:true
     })
-    
     } catch (error) {
-        console.log(error)
-        return res.json({
+    res.json({
         message:"Product not Created!",
         status:false,
-        error:error
+        error:error,
     })
     }
 
