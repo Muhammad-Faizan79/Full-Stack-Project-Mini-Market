@@ -25,7 +25,6 @@ const chengePassword =async ()=>{
             body:JSON.stringify({newPassword})
         }).then(responce=>responce.json())
         if(responce.status){
-            localStorage.removeItem("token")
             alert(responce.message);
             location.replace("login.html")
         }else{
